@@ -8,14 +8,13 @@ export default class Circle {
     this.direction = 1;
   }
 
-render(svg) {
-  let circle = document.createElementNS(SVG_NS, 'rect');
+render(svg, player1, player2) {
+  let circle = document.createElementNS(SVG_NS, 'circle');
+  circle.setAttributeNS(null, 'r', this.radius);
+  circle.setAttributeNS(null, 'cx', this.boardWidth / 2);
+  circle.setAttributeNS(null, 'cy', this.boardHeight / 2);
   circle.setAttributeNS(null, 'fill', 'white');
-  circle.setAttributeNS(null, 'width', this.width);
-  circle.setAttributeNS(null, 'height', this.height);
-  circle.setAttributeNS(null, 'x', this.x);
-  circle.setAttributeNS(null, 'y', this.y);
-
+  
   svg.appendChild(circle);
 
   }
