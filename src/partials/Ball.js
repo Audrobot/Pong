@@ -30,6 +30,12 @@ reset() {
   this.vx = this.direction * (18 - Math.abs(this.vy));
 }
 
+goal(player) {
+  player.score++;
+  this.reset();
+  console.log(player.score);
+}
+
 wallCollision() {
   const hitLeft = this.x - this.radius <= 0;
   const hitRight = this.x + this.radius >= this.boardWidth;
@@ -89,6 +95,14 @@ render(svg, player1, player2) {
   circle.setAttributeNS(null, 'fill', '#7FFF00');
   
   svg.appendChild(circle);
+
+  const rightGoal = this.x + this.radius >= this. boardWidth;
+  const leftGoal = this.x - this.radius <= 0;
+  if (rightGoal) {
+    this.goal(player1);
+  } else if (leftGoal) {
+    this.goal(player2);
+  }
   }
 }
 
