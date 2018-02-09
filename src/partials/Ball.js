@@ -1,4 +1,4 @@
-import { SVG_NS } from '../settings';
+import { SVG_NS, KEYS } from '../settings';
 
 export default class Circle {
   constructor(radius, boardWidth, boardHeight) {
@@ -8,6 +8,16 @@ export default class Circle {
     this.direction = 1;
 
     this.reset();
+
+    document.addEventListener('keydown', event => {
+      switch (event.key) {
+        case KEYS.spaceBar:
+          this.pause = !this.pause;
+          break;
+      }
+    
+    });
+
   }
 
 reset() {
@@ -36,6 +46,11 @@ wallCollision() {
 }
 
 render(svg, player1, player2) {
+  
+  if(this.pause){
+    return;
+  } 
+   
   this.x += this.vx;
   this.y += this.vy;
   

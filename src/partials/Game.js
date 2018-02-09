@@ -42,9 +42,23 @@ export default class Game {
 
 		console.log(this.player1);
 		console.log(this.player2);
+
+		document.addEventListener('keydown', event => {
+      switch (event.key) {
+        case KEYS.spaceBar:
+          this.pause = !this.pause;
+          break;
+      }
+    
+    });
+
 	}
 
 	render() {
+
+		if(this.pause){
+			return;
+		} 
 
 		this.gameElement.innerHTML = '';
 
