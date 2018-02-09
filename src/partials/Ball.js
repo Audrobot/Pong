@@ -17,20 +17,29 @@ reset() {
   while(this.vy === 0) {
     this.vy = Math.floor(Math.random() * 10 - 5);
   }
-  this.vx = this.direction * (6 - Math.abs(this.vy));
+  this.vx = this.direction * (8 - Math.abs(this.vy));
 }
 
 wallCollision() {
   const hitLeft = this.x - this.radius <= 0;
-  const hitRight = this.x - this.radius >= this.boardWidth;
+  const hitRight = this.x + this.radius >= this.boardWidth;
   const hitTop = this.y - this.radius <= 0;
-  const hitBottom = this.y - this.radius >= this.boardHeight;
+  const hitBottom = this.y + this.radius >= this.boardHeight;
+
+  if(hitTop || hitBottom) {
+    this.vy = -this.vy;
+  } else if (hitLeft || hitRight) {
+    // this.reset();
+    this.vx = -this.vx;
+  }
 
 }
 
 render(svg, player1, player2) {
   this.x += this.vx;
   this.y += this.vy;
+  
+  this.wallCollision();
 
   let circle = document.createElementNS(SVG_NS, 'circle');
   circle.setAttributeNS(null, 'r', this.radius);
