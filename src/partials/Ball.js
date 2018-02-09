@@ -27,7 +27,7 @@ reset() {
   while(this.vy === 0) {
     this.vy = Math.floor(Math.random() * 10 - 5);
   }
-  this.vx = this.direction * (18 - Math.abs(this.vy));
+  this.vx = this.direction * (15 - Math.abs(this.vy));
 }
 
 goal(player) {
@@ -92,19 +92,16 @@ render(svg, player1, player2) {
   circle.setAttributeNS(null, 'r', this.radius);
   circle.setAttributeNS(null, 'cx', this.x);
   circle.setAttributeNS(null, 'cy', this.y);
-  circle.setAttributeNS(null, 'fill', '#7FFF00');
-  
+  circle.setAttributeNS(null, 'fill', '#C6ED2C');
   svg.appendChild(circle);
 
-  const rightGoal = this.x + this.radius >= this. boardWidth;
+  const rightGoal = this.x + this.radius >= this.boardWidth;
   const leftGoal = this.x - this.radius <= 0;
   if (rightGoal) {
     this.goal(player1);
   } else if (leftGoal) {
     this.goal(player2);
-  }
+    this.direction = -1;
   }
 }
-
-
-
+}
