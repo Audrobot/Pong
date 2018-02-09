@@ -29,8 +29,10 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  background-color: #BF5132;
 }
+
 ol, ul {
 	list-style: none;
 }
@@ -80,7 +82,8 @@ body {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem; 
   text-align: center;
+  font-weight: bold;
 }
