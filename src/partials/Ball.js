@@ -7,7 +7,7 @@ export default class Circle {
     this.boardHeight = boardHeight;
     this.direction = 1;
     
-    this.ping = new Audio('public/sounds/pong-02.wav');
+    this.ping = new Audio('public/sounds/tennisserve.wav');
 
     this.reset();
   } // end of constructor//
@@ -19,7 +19,7 @@ reset() {
   while(this.vy === 0) {
     this.vy = Math.floor(Math.random() * 10 - 5);
   }
-  this.vx = this.direction * (12 - Math.abs(this.vy));
+  this.vx = this.direction * (10 - Math.abs(this.vy));
 }
 
 goal(player) {
