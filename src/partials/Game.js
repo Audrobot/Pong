@@ -12,7 +12,8 @@ export default class Game {
 		this.gameElement = document.getElementById(this.element);
 		// Other code goes here...
 		this.board = new Board(this.width, this.height);
-		this.ball = new Ball (8, this.width, this.height);
+		this.ball = new Ball (9, this.width, this.height);
+		this.ball2 = new Ball (7, this.width, this.height);
 
 		this.paddleWidth = 8;
 		this.paddleHeight = 56;
@@ -59,6 +60,7 @@ export default class Game {
 		this.player2.render(svg);
 
 		this.ball.render(svg, this.player1, this.player2);
+		this.ball2.render(svg, this.player1, this.player2);
 
 		this.gameElement.appendChild(svg);
 
