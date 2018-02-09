@@ -9,14 +9,14 @@ export default class Circle {
 
     this.reset();
 
-    document.addEventListener('keydown', event => {
-      switch (event.key) {
-        case KEYS.spaceBar:
-          this.pause = !this.pause;
-          break;
-      }
+    // document.addEventListener('keydown', event => {
+    //   switch (event.key) {
+    //     case KEYS.spaceBar:
+    //       this.pause = !this.pause;
+    //       break;
+    //   }
     
-    });
+    // });
 
   }
 
@@ -27,7 +27,7 @@ reset() {
   while(this.vy === 0) {
     this.vy = Math.floor(Math.random() * 10 - 5);
   }
-  this.vx = this.direction * (8 - Math.abs(this.vy));
+  this.vx = this.direction * (18 - Math.abs(this.vy));
 }
 
 wallCollision() {
@@ -42,28 +42,53 @@ wallCollision() {
     // this.reset();
     this.vx = -this.vx;
   }
+}
 
+paddleCollision(player1, player2) {
+  if(this.vx > 0) {
+    let paddle = player2.coordinates(player2.x, player2.y, player2.width, 
+      player2.height);
+    let [ leftX, rightX, topY, bottomY ] = paddle; 
+
+  if(
+    (this.x + this.radius >= leftX) 
+    && (this.x + this.radius <= rightX) 
+    && (this.y >= topY && this.y <= bottomY)
+  )
+  {
+    this.vx = -this.vx;
+  }
+
+  } else {
+    let paddle = player1.coordinates(player1.x, player1.y, player1.width, 
+      player1.height);
+    let [ leftX, rightX, topY, bottomY ] = paddle; 
+    if(
+      (this.x - this.radius <= rightX) 
+    && (this.x - this.radius >= leftX) 
+    && (this.y >= topY && this.y <= bottomY)
+    )
+    {
+      this.vx = -this.vx;
+    }
+  }
 }
 
 render(svg, player1, player2) {
-  
-  if(this.pause){
-    return;
-  } 
-   
+     
   this.x += this.vx;
   this.y += this.vy;
   
   this.wallCollision();
+  this.paddleCollision(player1, player2);
 
   let circle = document.createElementNS(SVG_NS, 'circle');
   circle.setAttributeNS(null, 'r', this.radius);
   circle.setAttributeNS(null, 'cx', this.x);
   circle.setAttributeNS(null, 'cy', this.y);
-  circle.setAttributeNS(null, 'fill', 'white');
+  circle.setAttributeNS(null, 'fill', '#7FFF00');
   
   svg.appendChild(circle);
-
   }
 }
 
