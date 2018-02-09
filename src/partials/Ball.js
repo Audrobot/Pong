@@ -6,19 +6,11 @@ export default class Circle {
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
     this.direction = 1;
+    
+    this.ping = new Audio('public/sounds/pong-01.wav');
 
     this.reset();
-
-    // document.addEventListener('keydown', event => {
-    //   switch (event.key) {
-    //     case KEYS.spaceBar:
-    //       this.pause = !this.pause;
-    //       break;
-    //   }
-    
-    // });
-
-  }
+  } // end of constructor//
 
 reset() {
   this.x = this.boardWidth / 2;
@@ -63,6 +55,7 @@ paddleCollision(player1, player2) {
   )
   {
     this.vx = -this.vx;
+    this.ping.play();
   }
 
   } else {
@@ -76,6 +69,7 @@ paddleCollision(player1, player2) {
     )
     {
       this.vx = -this.vx;
+      this.ping.play();
     }
   }
 }
