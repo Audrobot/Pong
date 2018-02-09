@@ -6,7 +6,14 @@ export default class Circle {
     this.boardWidth = boardWidth;
     this.boardHeight = boardHeight;
     this.direction = 1;
+
+    this.reset();
   }
+
+reset() {
+  this.x = this.boardWidth / 2;
+  this.y = this.boardHeight / 2;
+}
 
 render(svg, player1, player2) {
   let circle = document.createElementNS(SVG_NS, 'circle');
