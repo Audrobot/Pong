@@ -8,3 +8,6 @@ const game = new Game('game', 1000, 400);
     game.render();
     requestAnimationFrame(gameLoop);
 })();
+
+let ambience = new Audio('public/sounds/parkambience.wav');
+ +ambience.play();
