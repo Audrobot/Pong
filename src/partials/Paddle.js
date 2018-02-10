@@ -9,29 +9,15 @@ export default class Paddle {
     this.y = y;
     this.speed = 8;
     this.score = 0;
-    // this.up = up;
-    // this.down = down;
-
     this.player = player;
     this.keyState = {};
+    
     document.addEventListener('keydown', event => {
       this.keyState[event.key || event.which] = true;
     }, true);
     document.addEventListener('keyup', event => {
       this.keyState[event.key || event.which] = false;
-    }, true);
-
-    // document.addEventListener('keydown', event => {
-    //   console.log(event);
-    //   switch (event.key) {
-    //     case up:
-    //       this.up();
-    //       break;
-    //     case down:
-    //       this. down();
-    //       break;
-    //   }
-    // });
+    }, true);  
   }
   
   up() {

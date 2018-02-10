@@ -11,7 +11,6 @@ export default class Game {
 		this.width = width;
 		this.height = height;
 		this.gameElement = document.getElementById(this.element);
-		// Other code goes here...
 		this.board = new Board(this.width, this.height);
 		this.ball = new Ball (7, this.width, this.height);
 		this.ball2 = new Ball (7, this.width, this.height);
@@ -53,16 +52,14 @@ export default class Game {
       }
     });
 
-	this.score1 = new Score(this.width / 2 -50, 30, 30);
-	this.score2 = new Score(this.width / 2 +25, 30, 30);
+	this.score1 = new Score(this.width / 2 - 50, 30, 30);
+	this.score2 = new Score(this.width / 2 + 25, 30, 30);
 	}
 
 	render() {
-
 		if(this.pause){
 			return;
 		} 
-
 		this.gameElement.innerHTML = '';
 
 		let svg = document.createElementNS(SVG_NS, 'svg');

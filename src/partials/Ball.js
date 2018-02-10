@@ -10,7 +10,7 @@ export default class Circle {
     this.ping = new Audio('public/sounds/tennisserve.wav');
 
     this.reset();
-  } // end of constructor//
+  }
 
 reset() {
   this.x = this.boardWidth / 2;
