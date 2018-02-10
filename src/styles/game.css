@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  background-color: #BF5132;
+  background-color: rgb(145, 74, 54);
 }
 
 ol, ul {
@@ -86,4 +86,6 @@ h1 {
   margin-bottom: 1rem; 
   text-align: center;
   font-weight: bold;
+  color: #C6ED2C;
+
 }
