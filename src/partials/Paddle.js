@@ -7,7 +7,7 @@ export default class Paddle {
     this.height = height;
     this.x = x;
     this.y = y;
-    this.speed = 8;
+    this.speed = 6;
     this.score = 0;
     this.player = player;
     this.keyState = {};
@@ -60,6 +60,8 @@ export default class Paddle {
     rect.setAttributeNS(null, 'height', this.height);
     rect.setAttributeNS(null, 'x', this.x);
     rect.setAttributeNS(null, 'y', this.y);
+    rect.setAttributeNS(null, 'rx', 20);
+    rect.setAttributeNS(null, 'ry', 20);
 
     svg.appendChild(rect);
   }
