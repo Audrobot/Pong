@@ -1,6 +1,6 @@
 # Pong Game
 
-This basic pong game built using SVGs, emulates the stuggle that is outdoor tennis. In this version, the court is extended, balls sped up, and raquets rounded and decreased in size, just to make it a bit more challenging. May the calming park ambience soothe your headache.   
+This basic pong game built using SVGs, emulates the struggle that is outdoor tennis. In this version, the court is extended, balls sped up, and raquets rounded and decreased in size, just to make it a bit more challenging. May the calming park ambience soothe your headache.   
 
 ![ScreenShot](./public/images/pongscreenshot.png)
 
