@@ -41,9 +41,6 @@ export default class Game {
 			'player2'
 		);
 
-		console.log(this.player1);
-		console.log(this.player2);
-
 		document.addEventListener('keydown', event => {
       switch (event.key) {
         case KEYS.spaceBar:
@@ -80,12 +77,5 @@ export default class Game {
 		this.score2.render(svg, this.player2.score);
 
 		this.gameElement.appendChild(svg);
-
-		// if(this.player1.score > 10){
-		// 	this.ball2.render(svg, this.player1, this.player2);
-		// }
-		// if(this.player2.score > 10){
-		// 	this.ball2.render(svg, this.player1, this.player2);
-		// }
 	}
 }
