@@ -21,7 +21,6 @@ export default class Paddle {
   }
   
   up() {
-    console.log('up');
     this.y = this.y - this.speed;
     this.y = Math.max( 0, this.y - this.speed );
   }
