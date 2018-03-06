@@ -33,7 +33,7 @@ This basic pong game built using SVGs, emulates the struggle that is outdoor ten
 
 
 ## Takeaways
-* Having a reputation for being a little too loose at times, Javascript, as demonstrated in this project, exhibits the power to provide structure while maintaining flexibility. While this is my first experience with Object Oriented Programming, I am astounded to learn just how limitless, versatile, and formidable Javascript can be.
+Having a reputation for being a little too loose at times, Javascript, as demonstrated in this project, exhibits the power to provide structure while maintaining flexibility. While this is my first experience with Object Oriented Programming, I am astounded to learn just how limitless, versatile, and formidable Javascript can be.
 
 
 ## Built With
