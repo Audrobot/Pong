@@ -55,7 +55,7 @@ Audra Kornicki - [Audrobot](https://github.com/Audrobot)
 
 ## Acknowledgments
 
-Thank you to Jim Bennett, Rose Cass, and RED Academy for all the support and guidance.
+Thank you to Jim Bennett, Rose Cass, and RED Academy for all the hardwork, support, and guidance.
 
 
 
