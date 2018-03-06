@@ -6,15 +6,14 @@ import Score from './Score';
 
 export default class Game {
 
-	constructor(element, width, height, ) {
+	constructor(element, width, height) {
 		this.element = element;
 		this.width = width;
 		this.height = height;
 		this.gameElement = document.getElementById(this.element);
 		this.board = new Board(this.width, this.height);
-		this.ball = new Ball (7, this.width, this.height);
-		this.ball2 = new Ball (7, this.width, this.height);
-
+		this.ball = new Ball(7, this.width, this.height);
+		this.ball2 = new Ball(7, this.width, this.height);
 		this.paddleWidth = 20;
 		this.paddleHeight = 55;
 		this.boardGap = 10;
@@ -42,7 +41,7 @@ export default class Game {
 		);
 
 		document.addEventListener('keydown', event => {
-      switch (event.key) {
+      switch(event.key) {
         case KEYS.spaceBar:
           this.pause = !this.pause;
           break;
