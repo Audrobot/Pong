@@ -30,7 +30,7 @@ This basic pong game built using SVGs, emulates the struggle that is outdoor ten
 
 **Pause:**
 * spacebar
-* n.b.  pausing the game will not disable audio, just as taking a break from tennis practice would not eliminate backgound park ambience; this is intentional.
+* n.b.  pausing the game will not disable audio, just as taking a break from tennis practice would not eliminate background park ambience; this is intentional.
 
 
 ## Takeaways
