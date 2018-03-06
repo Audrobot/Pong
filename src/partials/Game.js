@@ -78,3 +78,6 @@ export default class Game {
 		this.gameElement.appendChild(svg);
 	}
 }
+
+let ambience = new Audio('public/sounds/parkambience.wav');
+ +ambience.play();
