@@ -30,6 +30,7 @@ This basic pong game built using SVGs, emulates the struggle that is outdoor ten
 
 **Pause:**
 * spacebar
+* n.b. pausing the game will not disable audio, just as taking a break from tennis practice would not eliminate backgound park ambience; this is intentional.
 
 
 ## Takeaways
@@ -54,6 +55,8 @@ Audra Kornicki - [Audrobot](https://github.com/Audrobot)
 
 
 ## Acknowledgments
+
+* Peaceful City Park Sound Ambience | Parc Linistit Dimineata courtesy of Florin Rosoga.
 
 Thank you to Jim Bennett, Rose Cass, and RED Academy for all the hardwork, support, and guidance.
 
